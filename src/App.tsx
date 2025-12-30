@@ -42,9 +42,7 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             <div className="flex-shrink-0 cursor-pointer">
-              <span className="text-2xl font-bold tracking-tighter text-white">
-                Blue <span className="text-brand-accent">Ocean</span>
-              </span>
+              <img src="/src/logo2.svg" alt="Blue Ocean Logo" className="h-3 md:h-4 w-auto" />
             </div>
             
             <div className="hidden md:block">
@@ -63,7 +61,7 @@ function App() {
 
             <div className="hidden md:block">
               <button className="bg-white/10 hover:bg-white/20 text-white px-6 py-2 rounded-full text-sm font-semibold transition-all border border-white/10 hover:shadow-[0_0_15px_rgba(14,165,233,0.3)]">
-                Área do Cliente
+                Entre em contato
               </button>
             </div>
 

@@ -42,8 +42,8 @@ export const Footer = () => {
         </motion.div>
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="text-2xl font-bold text-white">
-            Blue <span className="text-brand-accent">Ocean</span>
+          <div className="flex-shrink-0">
+             <img src="/src/logo2.svg" alt="Blue Ocean Logo" className="h-4 md:h-5 w-auto opacity-80" />
           </div>
           <p className="text-gray-600 text-sm">
             © 2025 Blue Ocean. Todos os direitos reservados.
@@ -53,4 +53,3 @@ export const Footer = () => {
     </footer>
   );
 };
-
