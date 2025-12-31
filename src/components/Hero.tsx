@@ -1,10 +1,11 @@
 import React from 'react';
 import { Play, ChevronRight, TrendingUp, Users, DollarSign, BarChart3 } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { LogoCarousel } from './LogoCarousel';
 
 export const Hero = () => {
   return (
-    <section className="relative pt-32 pb-20 overflow-hidden">
+    <section className="relative pt-32 pb-8 overflow-hidden">
       {/* Background Elements removed from here as they are now global */}
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
@@ -83,7 +84,7 @@ export const Hero = () => {
         </motion.div>
 
         {/* Stats Strip */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 border border-white/5 bg-white/[0.02] backdrop-blur-md py-12 px-6 rounded-3xl relative overflow-hidden">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 border border-white/5 bg-white/[0.02] backdrop-blur-md py-12 px-6 rounded-3xl relative overflow-hidden mb-24">
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/[0.02] to-transparent" />
           {[
             { icon: Users, value: "348+", label: "Clientes turbinados" },
@@ -105,6 +106,8 @@ export const Hero = () => {
             </motion.div>
           ))}
         </div>
+
+        <LogoCarousel />
       </div>
     </section>
   );

@@ -1,6 +1,7 @@
 import React from 'react';
 import { ChevronRight } from 'lucide-react';
 import { motion } from 'framer-motion';
+import logo2 from '../acests/logo2.svg';
 
 export const Footer = () => {
   return (
@@ -43,7 +44,7 @@ export const Footer = () => {
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex-shrink-0">
-             <img src="/src/logo2.svg" alt="Blue Ocean Logo" className="h-4 md:h-5 w-auto opacity-80" />
+             <img src={logo2} alt="Blue Ocean Logo" className="h-4 md:h-5 w-auto opacity-80" />
           </div>
           <p className="text-gray-600 text-sm">
             © 2025 Blue Ocean. Todos os direitos reservados.
