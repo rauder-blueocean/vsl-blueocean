@@ -66,7 +66,10 @@ export const Hero = () => {
           transition={{ duration: 0.5, delay: 0.5 }}
           className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center mb-8 md:mb-12"
         >
-          <button className="btn-primary group text-base md:text-lg px-8 md:px-10 py-3 md:py-4 shadow-[0_0_30px_rgba(59,130,246,0.4)] hover:shadow-[0_0_40px_rgba(59,130,246,0.5)]">
+          <button 
+            onClick={() => window.open('https://agenda.blueoceansem.com.br/team/comercial/vsl?month=2026-01', '_blank')}
+            className="btn-primary group text-base md:text-lg px-8 md:px-10 py-3 md:py-4 shadow-[0_0_30px_rgba(59,130,246,0.4)] hover:shadow-[0_0_40px_rgba(59,130,246,0.5)]"
+          >
             AGENDAR REUNIÃO
             <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </button>
