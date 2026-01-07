@@ -5,7 +5,7 @@ import { LogoCarousel } from './LogoCarousel';
 
 export const Hero = () => {
   return (
-    <section className="relative pt-32 pb-8 overflow-hidden">
+    <section className="relative pt-20 md:pt-24 pb-8 overflow-hidden">
       {/* Background Elements removed from here as they are now global */}
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
@@ -15,14 +15,14 @@ export const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="inline-block mb-6"
+          className="inline-block mb-3 md:mb-4"
         >
           <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-brand-accent/10 border border-brand-accent/20 text-brand-accent text-sm font-medium backdrop-blur-sm shadow-[0_0_20px_rgba(14,165,233,0.15)]">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-accent opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-accent"></span>
             </span>
-            Otimização de Leads para SaaS B2B
+            Otimização de Leads para <span className="text-white font-bold drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]">SaaS B2B</span>
           </div>
         </motion.div>
 
@@ -31,29 +31,20 @@ export const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="text-4xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight mb-8 leading-tight drop-shadow-lg"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight mb-4 md:mb-6 leading-[1.1] drop-shadow-lg"
         >
           Você não tem um problema de <span className="text-white/40 line-through decoration-brand-accent/50 decoration-4">leads</span>.
           <br />
           Você tem um problema de <span className="text-gradient drop-shadow-[0_0_15px_rgba(56,189,248,0.3)]">otimização</span>.
         </motion.h1>
 
-        <motion.p 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="mt-4 max-w-2xl mx-auto text-xl text-gray-400 mb-10 leading-relaxed"
-        >
-          Se você vende SaaS B2B por demo ou trial, escalar verba sem a otimização certa só gera volume ruim.
-        </motion.p>
-
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
+          className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center mb-8 md:mb-12"
         >
-          <button className="btn-primary group text-lg px-10 py-4 shadow-[0_0_30px_rgba(59,130,246,0.4)] hover:shadow-[0_0_40px_rgba(59,130,246,0.5)]">
+          <button className="btn-primary group text-base md:text-lg px-8 md:px-10 py-3 md:py-4 shadow-[0_0_30px_rgba(59,130,246,0.4)] hover:shadow-[0_0_40px_rgba(59,130,246,0.5)]">
             AGENDAR REUNIÃO
             <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </button>
@@ -67,7 +58,7 @@ export const Hero = () => {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="relative max-w-4xl mx-auto rounded-2xl p-0.5 bg-gradient-to-b from-brand-accent/20 to-transparent backdrop-blur-sm mb-24"
+          className="relative max-w-4xl mx-auto rounded-2xl p-0.5 bg-gradient-to-b from-brand-accent/20 to-transparent backdrop-blur-sm mb-12 md:mb-16"
         >
           <div className="relative aspect-video bg-black/50 rounded-xl overflow-hidden shadow-2xl group cursor-pointer">
              <iframe 
@@ -84,7 +75,7 @@ export const Hero = () => {
         </motion.div>
 
         {/* Stats Strip */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 border border-white/5 bg-white/[0.02] backdrop-blur-md py-12 px-6 rounded-3xl relative overflow-hidden mb-24">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 border border-white/5 bg-white/[0.02] backdrop-blur-md py-8 md:py-10 px-4 md:px-6 rounded-3xl relative overflow-hidden mb-12 md:mb-16">
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/[0.02] to-transparent" />
           {[
             { icon: Users, value: "348+", label: "Clientes turbinados" },
@@ -100,9 +91,9 @@ export const Hero = () => {
               transition={{ delay: index * 0.1 }}
               className="flex flex-col items-center justify-center text-center relative z-10"
             >
-              <stat.icon className="w-8 h-8 text-brand-accent mb-4 opacity-80 drop-shadow-[0_0_10px_rgba(14,165,233,0.5)]" />
-              <h3 className="text-3xl md:text-4xl font-bold text-white mb-2 tracking-tight">{stat.value}</h3>
-              <p className="text-gray-400 text-sm font-medium uppercase tracking-wide">{stat.label}</p>
+              <stat.icon className="w-6 h-6 md:w-8 md:h-8 text-brand-accent mb-2 md:mb-4 opacity-80 drop-shadow-[0_0_10px_rgba(14,165,233,0.5)]" />
+              <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-1 md:mb-2 tracking-tight">{stat.value}</h3>
+              <p className="text-gray-400 text-xs md:text-sm font-medium uppercase tracking-wide">{stat.label}</p>
             </motion.div>
           ))}
         </div>
