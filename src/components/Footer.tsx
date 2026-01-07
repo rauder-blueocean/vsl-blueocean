@@ -36,7 +36,7 @@ export const Footer = () => {
               <div className="hidden md:block w-1 h-1 rounded-full bg-gray-700" />
               <div className="flex items-center gap-2">
                 <div className="w-1.5 h-1.5 rounded-full bg-brand-accent" />
-                <span>Sem lead gen genérico</span>
+                <span>Sem Lead Genérico</span>
               </div>
             </div>
           </div>
