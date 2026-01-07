@@ -79,7 +79,7 @@ export const Hero = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 border border-white/5 bg-white/[0.02] backdrop-blur-md py-8 md:py-10 px-4 md:px-6 rounded-3xl relative overflow-hidden mb-12 md:mb-16">
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/[0.02] to-transparent" />
           {[
-            { icon: Users, value: "348+", label: "Clientes turbinados" },
+            { icon: Users, value: "484+", label: "SaaS turbinados" },
             { icon: DollarSign, value: "R$225MI+", label: "Faturamento gerado" },
             { icon: TrendingUp, value: "R$41MI+", label: "Investido em mídias" },
             { icon: BarChart3, value: "7134+", label: "Criativos produzidos" },
