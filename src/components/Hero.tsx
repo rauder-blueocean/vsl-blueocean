@@ -5,7 +5,7 @@ import { LogoCarousel } from './LogoCarousel';
 
 export const Hero = () => {
   return (
-    <section className="relative pt-20 md:pt-24 pb-8 overflow-hidden">
+    <section className="relative pt-28 md:pt-32 pb-8 overflow-hidden">
       {/* Background Elements removed from here as they are now global */}
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
@@ -38,21 +38,6 @@ export const Hero = () => {
           Você tem um problema de <span className="text-gradient drop-shadow-[0_0_15px_rgba(56,189,248,0.3)]">otimização</span>.
         </motion.h1>
 
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center mb-8 md:mb-12"
-        >
-          <button className="btn-primary group text-base md:text-lg px-8 md:px-10 py-3 md:py-4 shadow-[0_0_30px_rgba(59,130,246,0.4)] hover:shadow-[0_0_40px_rgba(59,130,246,0.5)]">
-            AGENDAR REUNIÃO
-            <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </button>
-          <p className="text-sm text-gray-500 max-w-xs text-left hidden sm:block">
-            Donos de SaaS B2B podem vender até 10x mais em MRR com o mesmo investimento.
-          </p>
-        </motion.div>
-
         {/* Video Placeholder */}
         <motion.div 
           initial={{ opacity: 0, scale: 0.95 }}
@@ -72,6 +57,22 @@ export const Hero = () => {
                 fetchPriority="high"
              />
           </div>
+        </motion.div>
+
+        {/* Botão Agendar Reunião */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+          className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center mb-8 md:mb-12"
+        >
+          <button className="btn-primary group text-base md:text-lg px-8 md:px-10 py-3 md:py-4 shadow-[0_0_30px_rgba(59,130,246,0.4)] hover:shadow-[0_0_40px_rgba(59,130,246,0.5)]">
+            AGENDAR REUNIÃO
+            <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+          </button>
+          <p className="text-sm text-gray-500 max-w-xs text-left hidden sm:block">
+            Donos de SaaS B2B podem vender até 10x mais em MRR com o mesmo investimento.
+          </p>
         </motion.div>
 
         {/* Stats Strip */}
