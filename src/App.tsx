@@ -6,7 +6,7 @@ import { Benefits } from './components/Benefits';
 import { HowItWorks } from './components/HowItWorks';
 import { Testimonials } from './components/Testimonials';
 import { Footer } from './components/Footer';
-import logo2 from './acests/logo2.svg';
+import logooficial from './acests/logooficial.png';
 
 const navItems = [
   { label: 'Recursos', href: '#recursos' },
@@ -43,7 +43,7 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-20">
               <div className="flex-shrink-0 cursor-pointer">
-                <img src={logo2} alt="Blue Ocean Logo" className="h-3 md:h-4 w-auto" />
+                <img src={logooficial} alt="Blue Ocean Logo" className="h-6 md:h-8 w-auto" />
               </div>
             
             <div className="hidden md:block">
