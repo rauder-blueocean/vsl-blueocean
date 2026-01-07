@@ -47,8 +47,8 @@ export const Hero = () => {
         >
           <div className="relative aspect-video bg-black/50 rounded-xl overflow-hidden shadow-2xl group cursor-pointer">
              <iframe 
-                id="panda-f9db10ec-7e3a-44f4-b4da-fd4b73ac5d68" 
-                src="https://player-vz-16affdf7-47d.tv.pandavideo.com.br/embed/?v=f9db10ec-7e3a-44f4-b4da-fd4b73ac5d68" 
+                id="panda-560bb98b-a4e4-49f0-a518-2b7dcf4e30d4" 
+                src="https://player-vz-16affdf7-47d.tv.pandavideo.com.br/embed/?v=560bb98b-a4e4-49f0-a518-2b7dcf4e30d4" 
                 style={{ border: 'none' }} 
                 allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture" 
                 allowFullScreen={true} 
