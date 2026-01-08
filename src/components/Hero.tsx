@@ -47,8 +47,8 @@ export const Hero = () => {
         >
           <div className="relative aspect-video bg-black/50 rounded-xl overflow-hidden shadow-2xl group cursor-pointer">
              <iframe 
-                id="panda-560bb98b-a4e4-49f0-a518-2b7dcf4e30d4" 
-                src="https://player-vz-16affdf7-47d.tv.pandavideo.com.br/embed/?v=560bb98b-a4e4-49f0-a518-2b7dcf4e30d4" 
+                id="panda-296f7c61-aa69-4b39-8793-4993fad95009" 
+                src="https://player-vz-16affdf7-47d.tv.pandavideo.com.br/embed/?v=296f7c61-aa69-4b39-8793-4993fad95009&autoplay=true&muted=true" 
                 style={{ border: 'none' }} 
                 allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture" 
                 allowFullScreen={true} 
@@ -66,7 +66,13 @@ export const Hero = () => {
           transition={{ duration: 0.5, delay: 0.5 }}
           className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center mb-8 md:mb-12"
         >
-          <button className="btn-primary group text-base md:text-lg px-8 md:px-10 py-3 md:py-4 shadow-[0_0_30px_rgba(59,130,246,0.4)] hover:shadow-[0_0_40px_rgba(59,130,246,0.5)]">
+          <button 
+            className="btn-primary group text-base md:text-lg px-8 md:px-10 py-3 md:py-4 shadow-[0_0_30px_rgba(59,130,246,0.4)] hover:shadow-[0_0_40px_rgba(59,130,246,0.5)]"
+            data-cal-namespace="vsl"
+            data-cal-link="team/comercial/vsl"
+            data-cal-origin="https://agenda.blueoceansem.com.br"
+            data-cal-config='{"layout":"month_view"}'
+          >
             AGENDAR REUNIÃO
             <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </button>

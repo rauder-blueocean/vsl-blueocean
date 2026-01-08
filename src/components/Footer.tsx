@@ -23,7 +23,21 @@ export const Footer = () => {
           </h2>
           
           <div className="flex flex-col items-center gap-6">
-            <button className="btn-primary text-xl px-12 py-5 group shadow-brand-accent/25">
+            <button 
+              className="btn-primary text-xl px-12 py-5 group shadow-brand-accent/25"
+              data-cal-namespace="vsl"
+              data-cal-link="team/comercial/vsl"
+              data-cal-origin="https://agenda.blueoceansem.com.br"
+              data-cal-config='{"layout":"month_view"}'
+              onClick={() => {
+                if (window.Cal && window.Cal.ns && window.Cal.ns.vsl) {
+                  window.Cal.ns.vsl("popup", {
+                    calLink: "team/comercial/vsl",
+                    layout: "month_view"
+                  });
+                }
+              }}
+            >
               AGENDAR REUNIÃO
               <ChevronRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
             </button>
