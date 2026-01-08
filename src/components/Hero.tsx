@@ -1,9 +1,67 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Play, ChevronRight, TrendingUp, Users, DollarSign, BarChart3 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { LogoCarousel } from './LogoCarousel';
 
 export const Hero = () => {
+  const iframeRef = useRef<HTMLIFrameElement>(null);
+
+  useEffect(() => {
+    const iframe = iframeRef.current;
+    if (!iframe) return;
+
+    let unmuted = false;
+
+    const tryUnmute = () => {
+      if (unmuted) return;
+      try {
+        // Tenta várias abordagens para desmutar
+        const iframeWindow = iframe.contentWindow;
+        if (iframeWindow) {
+          // Tenta encontrar e clicar no botão de unmute via postMessage
+          iframeWindow.postMessage(
+            JSON.stringify({ method: 'setMuted', value: false }),
+            'https://player-vz-16affdf7-47d.tv.pandavideo.com.br'
+          );
+          
+          // Tenta outra abordagem
+          iframeWindow.postMessage(
+            JSON.stringify({ event: 'command', func: 'unmute', args: [] }),
+            'https://player-vz-16affdf7-47d.tv.pandavideo.com.br'
+          );
+        }
+        unmuted = true;
+      } catch (e) {
+        // Ignora erros
+      }
+    };
+
+    const handleLoad = () => {
+      // Aguarda o player carregar e tenta desmutar após interação do usuário
+      setTimeout(() => {
+        // Tenta desmutar após qualquer interação do usuário
+        const handleInteraction = () => {
+          tryUnmute();
+          document.removeEventListener('click', handleInteraction);
+          document.removeEventListener('mousemove', handleInteraction);
+          document.removeEventListener('touchstart', handleInteraction);
+        };
+
+        document.addEventListener('click', handleInteraction, { once: true });
+        document.addEventListener('mousemove', handleInteraction, { once: true });
+        document.addEventListener('touchstart', handleInteraction, { once: true });
+
+        // Tenta desmutar automaticamente após 3 segundos (pode não funcionar devido às políticas)
+        setTimeout(tryUnmute, 3000);
+      }, 1000);
+    };
+
+    iframe.addEventListener('load', handleLoad);
+    return () => {
+      iframe.removeEventListener('load', handleLoad);
+    };
+  }, []);
+
   return (
     <section className="relative pt-28 md:pt-32 pb-8 overflow-hidden">
       {/* Background Elements removed from here as they are now global */}
@@ -47,8 +105,9 @@ export const Hero = () => {
         >
           <div className="relative aspect-video bg-black/50 rounded-xl overflow-hidden shadow-2xl group cursor-pointer">
              <iframe 
+                ref={iframeRef}
                 id="panda-296f7c61-aa69-4b39-8793-4993fad95009" 
-                src="https://player-vz-16affdf7-47d.tv.pandavideo.com.br/embed/?v=296f7c61-aa69-4b39-8793-4993fad95009&autoplay=true&muted=true" 
+                src="https://player-vz-16affdf7-47d.tv.pandavideo.com.br/embed/?v=296f7c61-aa69-4b39-8793-4993fad95009&autoplay=true" 
                 style={{ border: 'none' }} 
                 allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture" 
                 allowFullScreen={true} 

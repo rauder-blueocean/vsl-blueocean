@@ -30,8 +30,9 @@ export const Footer = () => {
               data-cal-origin="https://agenda.blueoceansem.com.br"
               data-cal-config='{"layout":"month_view"}'
               onClick={() => {
-                if (window.Cal && window.Cal.ns && window.Cal.ns.vsl) {
-                  window.Cal.ns.vsl("popup", {
+                const Cal = (window as any).Cal;
+                if (Cal && Cal.ns && Cal.ns.vsl) {
+                  Cal.ns.vsl("popup", {
                     calLink: "team/comercial/vsl",
                     layout: "month_view"
                   });
