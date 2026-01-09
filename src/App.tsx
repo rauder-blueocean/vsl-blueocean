@@ -5,6 +5,7 @@ import { PainPoints } from './components/PainPoints';
 import { Benefits } from './components/Benefits';
 import { HowItWorks } from './components/HowItWorks';
 import { Testimonials } from './components/Testimonials';
+import { WhyChooseUs } from './components/WhyChooseUs';
 import { Footer } from './components/Footer';
 import logooficial from './acests/logooficial.png';
 
@@ -95,6 +96,7 @@ function App() {
         <PainPoints />
         <Benefits />
         <HowItWorks />
+        <WhyChooseUs />
         <Testimonials />
         <Footer />
       </main>
