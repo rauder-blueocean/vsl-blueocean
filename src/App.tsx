@@ -7,6 +7,7 @@ import { HowItWorks } from './components/HowItWorks';
 import { Testimonials } from './components/Testimonials';
 import { WhyChooseUs } from './components/WhyChooseUs';
 import { Footer } from './components/Footer';
+import { ThankYou } from './components/ThankYou';
 import logooficial from './acests/logooficial.png';
 
 const navItems = [
@@ -18,6 +19,16 @@ const navItems = [
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  
+  // Verifica se está na página de obrigado
+  const isThankYouPage = window.location.pathname.includes('obrigado') || 
+                         window.location.search.includes('obrigado') ||
+                         window.location.hash.includes('obrigado');
+  
+  // Se for a página de obrigado, mostra apenas o componente ThankYou
+  if (isThankYouPage) {
+    return <ThankYou />;
+  }
 
   return (
     <div className="min-h-screen bg-brand-900 overflow-x-hidden relative">

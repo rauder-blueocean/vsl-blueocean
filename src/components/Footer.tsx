@@ -23,25 +23,15 @@ export const Footer = () => {
           </h2>
           
           <div className="flex flex-col items-center gap-6">
-            <button 
-              className="btn-primary text-xl px-12 py-5 group shadow-brand-accent/25"
-              data-cal-namespace="vsl"
-              data-cal-link="team/comercial/vsl"
-              data-cal-origin="https://agenda.blueoceansem.com.br"
-              data-cal-config='{"layout":"month_view"}'
-              onClick={() => {
-                const Cal = (window as any).Cal;
-                if (Cal && Cal.ns && Cal.ns.vsl) {
-                  Cal.ns.vsl("popup", {
-                    calLink: "team/comercial/vsl",
-                    layout: "month_view"
-                  });
-                }
-              }}
+            <a 
+              href="https://agenda.blueoceansem.com.br/team/comercial/vsl"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary text-xl px-12 py-5 group shadow-brand-accent/25 inline-flex items-center gap-2"
             >
               AGENDAR REUNIÃO
               <ChevronRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
-            </button>
+            </a>
             
             <div className="flex flex-col md:flex-row items-center gap-2 md:gap-8 text-gray-400 text-sm">
               <div className="flex items-center gap-2">

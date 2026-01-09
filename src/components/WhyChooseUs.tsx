@@ -12,7 +12,7 @@ const reasons = [
   {
     icon: BarChart3,
     title: "Metodologia Comprovada",
-    description: "Abordagem estratégica baseada em dados e refinada ao longo de mais de 668 SaaS atendidos.",
+    description: "Abordagem estratégica baseada em dados e refinada ao longo de 484+ SaaS atendidos.",
     image: "https://blueoceansem.com.br/wp-content/uploads/2025/12/card-08-e1767030613171.png"
   },
   {
