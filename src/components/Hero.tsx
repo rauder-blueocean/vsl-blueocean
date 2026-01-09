@@ -80,7 +80,7 @@ export const Hero = () => {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-accent opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-accent"></span>
             </span>
-            Otimização de Leads para <span className="text-white font-bold drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]">SaaS B2B</span>
+            Escala de vendas para <span className="text-white font-bold drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]">SaaS B2B</span>
           </div>
         </motion.div>
 
